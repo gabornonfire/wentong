@@ -1,18 +1,27 @@
+import { motion } from "framer-motion";
+
 interface SectionHeadingProps {
   num: string;
   title: string;
-  id: string;
+  id?: string;
 }
 
 const SectionHeading = ({ num, title, id }: SectionHeadingProps) => (
-  <div id={id} className="flex items-start gap-4 mt-[72px] mb-7 scroll-mt-16">
-    <div className="w-9 h-9 min-w-[36px] rounded-full border border-border flex items-center justify-center font-mono text-[11px] text-primary mt-1">
+  <motion.div
+    id={id}
+    className="flex items-baseline gap-4 mb-8 pt-16 scroll-mt-16"
+    initial={{ opacity: 0, x: -20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.5 }}
+  >
+    <span className="text-gold-gradient font-display text-5xl md:text-6xl font-bold opacity-40">
       {num}
-    </div>
-    <h2 className="font-display text-[1.65rem] font-semibold leading-[1.2] text-foreground">
+    </span>
+    <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground tracking-tight">
       {title}
     </h2>
-  </div>
+  </motion.div>
 );
 
 export default SectionHeading;
