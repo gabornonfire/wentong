@@ -14,7 +14,7 @@ const HeroSection = () => {
           Foherb / Whieda · Tudományos Összefoglaló
         </p>
         <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6">
-          <span className="text-foreground">A Wentong 1.0:</span>
+          <span className="text-foreground">A Wentong 1.0</span>
           <br />
           <span className="text-gold-gradient">Mi a valódi tudomány mögötte?</span>
         </h1>

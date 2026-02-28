@@ -34,8 +34,8 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="hidden lg:flex fixed left-6 bottom-6 z-50 flex-col gap-2"
-      initial={{ opacity: 0, x: -20 }}
+      className="hidden lg:flex fixed right-6 bottom-6 z-50 flex-col gap-2"
+      initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 1, duration: 0.5 }}
     >
@@ -43,7 +43,7 @@ const Navbar = () => {
         <a
           key={id}
           href={`#${id}`}
-          className={`text-[10px] font-mono tracking-wider px-3 py-1.5 rounded-full transition-all duration-300 text-left ${
+          className={`text-[10px] font-mono tracking-wider px-3 py-1.5 rounded-full transition-all duration-300 text-right ${
             active === id
               ? "bg-primary text-primary-foreground"
               : "text-muted-foreground hover:text-foreground"
