@@ -4,6 +4,11 @@ import SectionHeading from "@/components/SectionHeading";
 import TechBlock from "@/components/TechBlock";
 import FlowDiagram from "@/components/FlowDiagram";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import ScienceLevelsSection from "@/components/ScienceLevelsSection";
+import ClaimsSection from "@/components/ClaimsSection";
+import CommunicationSection from "@/components/CommunicationSection";
+import EffectsSection from "@/components/EffectsSection";
+import ReferenceSection from "@/components/ReferenceSection";
 
 const Index = () => {
   return (
@@ -226,14 +231,23 @@ const Index = () => {
         {/* Placeholder for sections 3-5 that will come in next message */}
         <div className="divider-line my-12" />
 
-        <RevealOnScroll>
-          <SectionHeading num="3" title="Tudományos bizonyítékok értékelése" id="tudomany" />
-        </RevealOnScroll>
-        <RevealOnScroll>
-          <p className="text-muted-foreground text-sm italic">
-            A további szekciók tartalma hamarosan...
-          </p>
-        </RevealOnScroll>
+        <ScienceLevelsSection />
+
+        <div className="divider-line my-14" />
+
+        <ClaimsSection />
+
+        <div className="divider-line my-12" />
+
+        <CommunicationSection />
+
+        <div className="divider-line my-12" />
+
+        <EffectsSection />
+
+        <div className="divider-line my-12" />
+
+        <ReferenceSection />
       </main>
     </div>
   );
