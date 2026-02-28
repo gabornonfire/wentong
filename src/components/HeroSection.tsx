@@ -1,21 +1,28 @@
+import { motion } from "framer-motion";
+
 const HeroSection = () => {
   return (
-    <header className="min-h-[88vh] flex items-center justify-center px-6 pt-20 pb-16 relative overflow-hidden bg-hero-gradient">
-      <div className="absolute inset-0 bg-dot-pattern opacity-[0.025]" />
-      <div className="relative z-10 max-w-[720px] text-center animate-fade-up">
-        <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-primary mb-6 block">
+    <header className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-hero-gradient">
+      <div className="absolute inset-0 bg-dot-pattern opacity-[0.03]" />
+      <motion.div
+        className="relative z-10 max-w-3xl mx-auto px-6 text-center"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        <p className="font-mono text-xs tracking-[0.3em] text-primary uppercase mb-6">
           Foherb / Whieda · Tudományos Összefoglaló
-        </span>
-        <h1 className="font-display text-[clamp(2.2rem,5vw,4rem)] font-bold leading-[1.1] mb-6">
+        </p>
+        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6">
           <span className="text-foreground">A Wentong 1.0:</span>
           <br />
           <span className="text-gold-gradient">Mi a valódi tudomány mögötte?</span>
         </h1>
-        <p className="text-muted-foreground text-[15px] leading-relaxed max-w-[480px] mx-auto mb-9">
+        <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl mx-auto mb-10">
           Objektív áttekintés terapeuták, fitnesz-szakemberek és érdeklődők számára — négy technológia, egy eszköz, a bizonyítotttól a feltörekvőig
         </p>
-        <div className="divider-line max-w-[200px] mx-auto" />
-      </div>
+        <div className="divider-line max-w-xs mx-auto" />
+      </motion.div>
     </header>
   );
 };

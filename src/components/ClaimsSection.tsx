@@ -1,4 +1,4 @@
-import RevealOnScroll from "./RevealOnScroll";
+import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
 interface Claim {
@@ -21,21 +21,26 @@ const claims: Claim[] = [
 
 const ClaimsSection = () => (
   <>
-    <RevealOnScroll>
-      <SectionHeading num="4" title="Állítások gyors értékelése" id="allitasok" />
-    </RevealOnScroll>
+    <SectionHeading num="4" title="Állítások gyors értékelése" />
 
-    <RevealOnScroll>
-      <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-3.5 mb-8">
-        {claims.map((c, i) => (
-          <div key={i} className="bg-card-elevated border border-border rounded-lg p-4">
-            <div className="text-xs text-muted-foreground mb-1">{c.title}</div>
-            <div className={`font-mono text-[10px] tracking-[0.1em] font-medium mb-2 ${c.verdictColor}`}>{c.verdict}</div>
-            <div className="text-[11.5px] text-muted-foreground leading-relaxed">{c.body}</div>
+    <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-3.5 mb-8">
+      {claims.map((c, i) => (
+        <motion.div
+          key={i}
+          className="card-elevated rounded-lg p-5 flex flex-col gap-3"
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: i * 0.05 }}
+        >
+          <div>
+            <p className="text-xs text-muted-foreground mb-1">{c.title}</p>
+            <span className={`font-mono text-[10px] tracking-[0.1em] font-medium ${c.verdictColor}`}>{c.verdict}</span>
           </div>
-        ))}
-      </div>
-    </RevealOnScroll>
+          <p className="text-[11.5px] text-muted-foreground leading-relaxed">{c.body}</p>
+        </motion.div>
+      ))}
+    </div>
   </>
 );
 
