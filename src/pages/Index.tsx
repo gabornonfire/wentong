@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -16,6 +17,14 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <ThemeToggle />
+
+      {/* Language switcher */}
+      <div className="fixed top-4 left-4 z-50 flex gap-2">
+        <Link to="/en" className="text-xs font-mono text-primary hover:text-foreground transition-colors bg-card/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-border">
+          🇬🇧 EN
+        </Link>
+      </div>
+
       <HeroSection />
 
       <main className="max-w-3xl mx-auto px-6 pb-24">
