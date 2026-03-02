@@ -18,7 +18,7 @@ const SectionHeading = ({ num, title, id }: SectionHeadingProps) => (
     <span className="text-gold-gradient font-display text-5xl md:text-6xl font-bold opacity-40">
       {num}
     </span>
-    <h2 className="font-display text-2xl md:text-3xl font-semibold text-foreground tracking-tight">
+    <h2 className="font-sans text-2xl md:text-3xl font-semibold text-foreground tracking-tight">
       {title}
     </h2>
   </motion.div>

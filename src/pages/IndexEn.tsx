@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import ThemeToggle from "@/components/ThemeToggle";
+import firIcon from "@/assets/fir-icon.png";
 import SectionHeading from "@/components/SectionHeading";
 import TechBlock from "@/components/TechBlock";
 import FlowDiagram from "@/components/FlowDiagram";
@@ -126,7 +127,7 @@ const IndexEn = () => {
 
         {/* FIR */}
         <TechBlock
-          icon="🌡"
+          icon={<img src={firIcon} alt="FIR icon" className="w-8 h-8 rounded" />}
           title="Far-Infrared Radiation (FIR)"
           subtitle="Far Infrared Radiation · 4–14 µm wavelength"
           gradientColor="hsl(190, 60%, 45%)"
