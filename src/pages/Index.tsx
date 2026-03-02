@@ -52,16 +52,16 @@ const Index = () => {
         <RevealOnScroll>
           <div className="flex gap-2 flex-wrap mb-7">
             {[
-              { label: "FIR termoterápia", icon: <Flame size={13} strokeWidth={1.5} /> },
-              { label: "Fotobiomoduláció", icon: <Lightbulb size={13} strokeWidth={1.5} /> },
-              { label: "Ionizáció", icon: <Zap size={13} strokeWidth={1.5} /> },
-              { label: "Reflexterápia", icon: <Footprints size={13} strokeWidth={1.5} /> },
+              { label: "FIR termoterápia", icon: <Flame size={13} strokeWidth={1.5} />, cls: "text-accent border-accent/30 bg-accent/10" },
+              { label: "Fotobiomoduláció", icon: <Lightbulb size={13} strokeWidth={1.5} />, cls: "text-rose border-rose/30 bg-rose/10" },
+              { label: "Ionizáció", icon: <Zap size={13} strokeWidth={1.5} />, cls: "text-purple border-purple/30 bg-purple-dim" },
+              { label: "Reflexterápia", icon: <Footprints size={13} strokeWidth={1.5} />, cls: "text-primary border-primary/30 bg-primary-dim" },
             ].map((pill) => (
               <span
                 key={pill.label}
-                className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.1em] uppercase py-[5px] px-3 rounded-full border text-primary border-primary/25 bg-primary/5"
+                className={`inline-flex items-center font-mono text-[9px] tracking-[0.1em] uppercase py-[5px] px-3 rounded-full border ${pill.cls}`}
               >
-                {pill.icon}
+                <span className="mr-2 inline-flex items-center">{pill.icon}</span>
                 {pill.label}
               </span>
             ))}
