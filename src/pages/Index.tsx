@@ -12,6 +12,7 @@ import CommunicationSection from "@/components/CommunicationSection";
 import EffectsSection from "@/components/EffectsSection";
 import ReferenceSection from "@/components/ReferenceSection";
 import ThemeToggle from "@/components/ThemeToggle";
+import FootSoleIcon from "@/components/icons/FootSoleIcon";
 import firIcon from "@/assets/fir-icon-gold.png";
 
 const Index = () => {
@@ -107,7 +108,7 @@ const Index = () => {
 
         {/* FIR */}
         <TechBlock
-          icon={<Waves size={28} strokeWidth={1.5} className="text-primary" />}
+          icon={<Waves size={28} strokeWidth={1.5} className="text-primary rotate-90" />}
           title="Távoli infravörös sugárzás (FIR – Far Infrared)"
           subtitle="Far Infrared Radiation · 4–14 µm hullámhossz"
           gradientColor="hsl(190, 60%, 45%)"
@@ -177,7 +178,7 @@ const Index = () => {
 
         {/* REFLEX */}
         <TechBlock
-          icon={<Footprints size={28} strokeWidth={1.5} className="text-primary" />}
+          icon={<FootSoleIcon size={28} className="text-primary" />}
           title="Talp-stimuláció és reflexterápia"
           subtitle="Plantar Stimulation · Reflex Zones · Mechanoreceptors"
           gradientColor="hsl(38, 75%, 55%)"
