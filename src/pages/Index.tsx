@@ -129,7 +129,7 @@ const Index = () => {
 
         {/* PBM */}
         <TechBlock
-          icon="💡"
+          icon={<Lightbulb size={28} strokeWidth={1.5} className="text-primary" />}
           title="Fotobiomoduláció (PBM)"
           subtitle="Low-Level Light Therapy · 630–660 nm vörös + 415 nm kék"
           gradientColor="hsl(345, 74%, 60%)"
@@ -151,7 +151,7 @@ const Index = () => {
 
         {/* ION */}
         <TechBlock
-          icon="⚡"
+          icon={<Zap size={28} strokeWidth={1.5} className="text-primary" />}
           title="Negatív ionizáció"
           subtitle="Negative Ion Generation · Levegőminőség és légzés"
           gradientColor="hsl(268, 43%, 70%)"
@@ -177,7 +177,7 @@ const Index = () => {
 
         {/* REFLEX */}
         <TechBlock
-          icon="🦶"
+          icon={<Footprints size={28} strokeWidth={1.5} className="text-primary" />}
           title="Talp-stimuláció és reflexterápia"
           subtitle="Plantar Stimulation · Reflex Zones · Mechanoreceptors"
           gradientColor="hsl(38, 75%, 55%)"
