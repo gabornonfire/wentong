@@ -15,7 +15,7 @@ const SectionHeading = ({ num, title, id }: SectionHeadingProps) => (
     viewport={{ once: true, margin: "-100px" }}
     transition={{ duration: 0.5 }}
   >
-    <span className="text-gold-gradient font-display text-5xl md:text-6xl font-bold opacity-40">
+    <span className="text-gold-gradient font-display text-5xl md:text-6xl font-light opacity-40" style={{ letterSpacing: '-0.02em' }}>
       {num}
     </span>
     <h2 className="font-sans text-2xl md:text-3xl font-semibold text-foreground tracking-tight">
