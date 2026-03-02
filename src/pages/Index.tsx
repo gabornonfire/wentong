@@ -11,6 +11,7 @@ import CommunicationSection from "@/components/CommunicationSection";
 import EffectsSection from "@/components/EffectsSection";
 import ReferenceSection from "@/components/ReferenceSection";
 import ThemeToggle from "@/components/ThemeToggle";
+import firIcon from "@/assets/fir-icon.png";
 
 const Index = () => {
   return (
@@ -104,7 +105,7 @@ const Index = () => {
 
         {/* FIR */}
         <TechBlock
-          icon="🌡"
+          icon={<img src={firIcon} alt="FIR icon" className="w-8 h-8 rounded" />}
           title="Far-Infrared sugárzás (FIR)"
           subtitle="Far Infrared Radiation · 4–14 µm hullámhossz"
           gradientColor="hsl(190, 60%, 45%)"

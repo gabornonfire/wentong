@@ -9,7 +9,7 @@ interface TechBadge {
 }
 
 interface TechBlockProps {
-  icon: string;
+  icon: React.ReactNode;
   title: string;
   subtitle: string;
   gradientColor: string;
@@ -42,7 +42,7 @@ const TechBlock = ({ icon, title, subtitle, gradientColor, children, mechSteps, 
         className="absolute top-0 left-0 right-0 h-0.5"
         style={{ background: `linear-gradient(90deg, ${gradientColor}, transparent)` }}
       />
-      <span className="text-[28px] mb-2.5 block">{icon}</span>
+      <span className="text-[28px] mb-2.5 block leading-none">{icon}</span>
       <h3 className="font-display text-xl font-semibold mb-1.5">{title}</h3>
       <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-subtle mb-4 block">
         {subtitle}
