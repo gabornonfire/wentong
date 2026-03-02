@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Flame, Lightbulb, Zap, Footprints } from "lucide-react";
+import { Flame, Lightbulb, Zap, Footprints, Waves, Atom } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -107,7 +107,7 @@ const Index = () => {
 
         {/* FIR */}
         <TechBlock
-          icon={<img src={firIcon} alt="FIR icon" className="w-8 h-8" />}
+          icon={<Waves size={28} strokeWidth={1.5} className="text-primary" />}
           title="Távoli infravörös sugárzás (FIR – Far Infrared)"
           subtitle="Far Infrared Radiation · 4–14 µm hullámhossz"
           gradientColor="hsl(190, 60%, 45%)"
@@ -151,7 +151,7 @@ const Index = () => {
 
         {/* ION */}
         <TechBlock
-          icon={<Zap size={28} strokeWidth={1.5} className="text-primary" />}
+          icon={<Atom size={28} strokeWidth={1.5} className="text-primary" />}
           title="Negatív ionizáció"
           subtitle="Negative Ion Generation · Levegőminőség és légzés"
           gradientColor="hsl(268, 43%, 70%)"
