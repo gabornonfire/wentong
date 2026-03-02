@@ -11,7 +11,7 @@ import CommunicationSection from "@/components/CommunicationSection";
 import EffectsSection from "@/components/EffectsSection";
 import ReferenceSection from "@/components/ReferenceSection";
 import ThemeToggle from "@/components/ThemeToggle";
-import firIcon from "@/assets/fir-icon.png";
+import firIcon from "@/assets/fir-icon-new.png";
 
 const Index = () => {
   return (
@@ -105,8 +105,8 @@ const Index = () => {
 
         {/* FIR */}
         <TechBlock
-          icon={<img src={firIcon} alt="FIR icon" className="w-8 h-8 rounded" />}
-          title="Far-Infrared sugárzás (FIR)"
+          icon={<img src={firIcon} alt="FIR icon" className="w-8 h-8" style={{ filter: 'brightness(0) saturate(100%) invert(76%) sepia(30%) saturate(600%) hue-rotate(10deg) brightness(95%)' }} />}
+          title="Távoli infravörös sugárzás (FIR – Far Infrared)"
           subtitle="Far Infrared Radiation · 4–14 µm hullámhossz"
           gradientColor="hsl(190, 60%, 45%)"
           mechSteps={[
