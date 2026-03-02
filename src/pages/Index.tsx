@@ -53,9 +53,9 @@ const Index = () => {
         <RevealOnScroll>
           <div className="flex gap-2 flex-wrap mb-7">
             {[
-              { label: "FIR termoterápia", icon: <Flame size={13} strokeWidth={1.5} />, cls: "text-accent border-accent/30 bg-accent/10" },
+              { label: "FIR termoterápia", icon: <Waves size={13} strokeWidth={1.5} className="rotate-90" />, cls: "text-accent border-accent/30 bg-accent/10" },
               { label: "Fotobiomoduláció", icon: <Lightbulb size={13} strokeWidth={1.5} />, cls: "text-rose border-rose/30 bg-rose/10" },
-              { label: "Ionizáció", icon: <Zap size={13} strokeWidth={1.5} />, cls: "text-purple border-purple/30 bg-purple-dim" },
+              { label: "Ionizáció", icon: <Atom size={13} strokeWidth={1.5} />, cls: "text-purple border-purple/30 bg-purple-dim" },
               { label: "Reflexterápia", icon: <FootSoleIcon size={13} />, cls: "text-primary border-primary/30 bg-primary-dim" },
             ].map((pill) => (
               <span
