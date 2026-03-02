@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Flame, Lightbulb, Zap, Footprints } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import SectionHeading from "@/components/SectionHeading";
@@ -51,15 +52,16 @@ const Index = () => {
         <RevealOnScroll>
           <div className="flex gap-2 flex-wrap mb-7">
             {[
-              { label: "🌡 FIR termoterápia", cls: "text-accent border-accent/30 bg-accent/10" },
-              { label: "💡 Fotobiomoduláció", cls: "text-rose border-rose/30 bg-rose/10" },
-              { label: "⚡ Ionizáció", cls: "text-purple border-purple/30 bg-purple-dim" },
-              { label: "🦶 Reflexterápia", cls: "text-primary border-primary/30 bg-primary-dim" },
+              { label: "FIR termoterápia", icon: <Flame size={13} strokeWidth={1.5} /> },
+              { label: "Fotobiomoduláció", icon: <Lightbulb size={13} strokeWidth={1.5} /> },
+              { label: "Ionizáció", icon: <Zap size={13} strokeWidth={1.5} /> },
+              { label: "Reflexterápia", icon: <Footprints size={13} strokeWidth={1.5} /> },
             ].map((pill) => (
               <span
                 key={pill.label}
-                className={`font-mono text-[9px] tracking-[0.1em] uppercase py-[5px] px-3 rounded-full border ${pill.cls}`}
+                className="inline-flex items-center gap-1.5 font-mono text-[9px] tracking-[0.1em] uppercase py-[5px] px-3 rounded-full border text-primary border-primary/25 bg-primary/5"
               >
+                {pill.icon}
                 {pill.label}
               </span>
             ))}
