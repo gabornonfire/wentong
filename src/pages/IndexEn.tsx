@@ -24,6 +24,9 @@ const IndexEn = () => {
         <Link to="/" className="text-xs font-mono text-primary hover:text-foreground transition-colors bg-card/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-border">
           🇭🇺 HU
         </Link>
+        <Link to="/it" className="text-xs font-mono text-primary hover:text-foreground transition-colors bg-card/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-border">
+          🇮🇹 IT
+        </Link>
       </div>
 
       {/* Hero */}
