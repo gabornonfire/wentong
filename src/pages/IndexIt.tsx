@@ -29,6 +29,9 @@ const IndexIt = () => {
         <Link to="/en" className="text-xs font-mono text-primary hover:text-foreground transition-colors bg-card/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-border">
           🇬🇧 EN
         </Link>
+        <Link to="/sk" className="text-xs font-mono text-primary hover:text-foreground transition-colors bg-card/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-border">
+          🇸🇰 SK
+        </Link>
       </div>
 
       {/* Hero */}
